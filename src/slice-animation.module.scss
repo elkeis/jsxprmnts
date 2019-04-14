@@ -1,0 +1,28 @@
+$shift: 5px;
+@keyframes slice-glitch {
+  0% {
+      transform: translateX(0);
+  }
+  30% {
+      transform: translateX(-$shift);
+  }
+  60% {
+      transform: translateX($shift);
+  }
+  100% {
+      transform: translateX(0);
+  }
+
+}
+
+
+.slice {
+    &:nth-child(odd) {
+        filter: hue-rotate(85deg);
+        animation: slice-glitch .2s linear .0s infinite alternate;
+    }
+    &:nth-child(even) {
+        filter: hue-rotate(-85deg);
+        animation: slice-glitch .2s linear .1s infinite alternate;
+    }
+}
