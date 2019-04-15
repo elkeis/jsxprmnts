@@ -25,6 +25,9 @@ class ImageSlicePage extends Component {
         return (
             <div className="image-slice-page">
                 <div className="component-area">
+                    <h1>ImageSlice component</h1>
+                    <p>Image sliced in <code>N</code> pieces at different angle. 
+                    Use controls and CSS editor to play with effects</p>
                     <div className="image-container">
                         <div className="image">
                             <ImageSlice
@@ -39,17 +42,6 @@ class ImageSlicePage extends Component {
                             onChange={this.setImageSliceProps.bind(this)}
                         >
                         </PropertyControls>
-                        {/* <div className="component-control">
-                            <div className="control-name">
-                            
-                            </div>
-                            <div className="control-item">
-                            
-                            </div>
-                            <div className="control-value">
-                            
-                            </div>
-                        </div> */}
                     </div>
                 </div>
                 <div className="styles-area">

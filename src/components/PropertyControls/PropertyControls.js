@@ -4,20 +4,18 @@ class PropertyControls extends Component {
 
     renderDigitControl(name, value) {
         return (
-            <div className="digit-control">
+            <div className="control-item">
                 <label>{name}</label>
                 <input type="number" value={value} onChange={this.buildOnChangeFunction(name)}></input>
-                <span>{value}</span>
             </div>
         )
     }
 
     renderTextControl(name, value) {
         return (
-            <div className="digit-control">
+            <div className="control-item">
                 <label>{name}</label>
                 <input type="text" value={value} onChange={this.buildOnChangeFunction(name)}></input>
-                <span>{value}</span>
             </div>
         )
     }

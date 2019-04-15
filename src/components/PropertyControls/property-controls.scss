@@ -1,0 +1,13 @@
+.property-controls {
+    padding: 20px;
+    .control-item {
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: row;
+        input {
+            height: 20px;
+            width: 100%;
+            margin-left: 10px;
+        }
+    }
+}

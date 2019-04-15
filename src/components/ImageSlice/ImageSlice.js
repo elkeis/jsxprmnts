@@ -4,15 +4,6 @@ import {calculateCssValues} from './sliceMath';
 const DEFAULT_SLICE_CLASS_NAME = 'slice';
 
 class ImageSlice extends Component {
-    constructor(props) {
-        super(props);
-
-        this.photoUrl = props.url;
-        this.height = props.height;
-        this.width = props.width;
-        this.sliceCount = props.sliceCount || 4;
-        this.sliceAngle = props.sliceAngle || 30;
-    }
 
     buildSliceClassNames(sliceClassName) {
         let sliceClassNames = [DEFAULT_SLICE_CLASS_NAME];
