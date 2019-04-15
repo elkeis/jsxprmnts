@@ -8,18 +8,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  .photo-container {
-    overflow: hidden;
-    .sliced-photo {
-      margin: -5px;
-      width: 510px;
-      height: 260px;
-    }
-  }
-
-  .css-editor {
-    width: 500px;
-    height: 400px;
-  }
 }
