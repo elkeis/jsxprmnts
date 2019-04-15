@@ -2,7 +2,35 @@ import React, { Component } from 'react';
 import './App.scss';
 import ImageSlice from './experiments/ImageSlice';
 import imageUrl from './rick-and-morty.png';
-import sliceStyles from  './slice-animation.module.scss';
+import CSSEditor from './experiments/CSSEditor';
+
+const SLICE_CLASS = 'image-slice';
+const SLICE_STYLE = `
+@keyframes slice-glitch {
+  0% {
+      transform: translateX(0);
+  }
+  30% {
+      transform: translateX(-5px);
+  }
+  60% {
+      transform: translateX(5px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+
+}
+
+
+.${SLICE_CLASS}:nth-child(odd) {
+  filter: hue-rotate(85deg);
+  animation: slice-glitch .2s linear .0s infinite alternate;
+}
+.${SLICE_CLASS}:nth-child(even) {
+    filter: hue-rotate(-85deg);
+    animation: slice-glitch .2s linear .1s infinite alternate;
+}`
 
 class App extends Component {
 
@@ -14,7 +42,7 @@ class App extends Component {
       height: 260,
       sliceCount: 2,
       sliceAngle: 76,
-      sliceClass: sliceStyles.slice
+      sliceClass: SLICE_CLASS
     }
   }
 
@@ -76,9 +104,9 @@ class App extends Component {
             <input type="text" name="className" value={this.state.sliceClass} onChange={this.changeClassName.bind(this)}
             ></input>
           </div>
-          <div className="css-editor">
-            <textarea onChange={this.changeStyle.bind(this)}></textarea>
-          </div>
+        </div>
+        <div className="css-editor">
+          <CSSEditor css={SLICE_STYLE}></CSSEditor>
         </div>
         <style>{this.state.styleText}</style>
       </div>
