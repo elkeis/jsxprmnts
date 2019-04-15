@@ -17,7 +17,6 @@ class ImageSlice extends Component {
         this.width = props.width;
         this.sliceCount = props.sliceCount || 4;
         this.sliceAngle = props.sliceAngle || 30;
-        this.sliceClassNames = this.buildSliceClassNames(props.sliceClass);
     }
 
     buildSliceClassNames(sliceClassName) {
@@ -28,16 +27,16 @@ class ImageSlice extends Component {
         return sliceClassNames.join(' ');
     }
 
-    buildImageSliceStyle() {
-        const v = this.cssValues;
+    buildImageSliceStyle(cssValues) {
+        const v = cssValues;
         return  {
             width: `${v.w}px`,
             height: `${v.h}px`,
         };
     }
 
-    buildPhotoContainerSliceStyle() {
-        const v = this.cssValues;
+    buildPhotoContainerSliceStyle(cssValues) {
+        const v = cssValues;
         return {
             width: `${v.W}px`,
             height: `${v.H}px`,
@@ -45,8 +44,8 @@ class ImageSlice extends Component {
         };
     }
 
-    buildSliceStyle() {
-        const v = this.cssValues;
+    buildSliceStyle(cssValues) {
+        const v = cssValues;
         return {
             width: `${v.sW}px`,
             height: `${v.sH + 1}px`,
@@ -55,8 +54,8 @@ class ImageSlice extends Component {
         };
     }
 
-    buildSliceBackgroundStyle(i) {
-        const v = this.cssValues;
+    buildSliceBackgroundStyle(cssValues, i) {
+        const v = cssValues;
         let s = {
             width: `${v.w}px`,
             height: `${v.h}px`,
@@ -68,24 +67,24 @@ class ImageSlice extends Component {
     }
 
     render() {
-        this.cssValues = calculateCssValues(
+        const v = calculateCssValues(
             this.props.width,
             this.props.height,
             this.props.sliceCount,
             this.props.sliceAngle
         );
+        const sliceClassNames = this.buildSliceClassNames(this.props.sliceClass);
         const slices = [];
-        const v = this.cssValues;
         for (let i = 0; i < v.n; i++) {
             slices.push(
-                <div className={this.sliceClassNames} style={this.buildSliceStyle()} key={i}>
-                    <div className="slice-background" style={this.buildSliceBackgroundStyle(i)}></div>
+                <div className={sliceClassNames} style={this.buildSliceStyle(v)} key={i}>
+                    <div className="slice-background" style={this.buildSliceBackgroundStyle(v, i)}></div>
                 </div>
             );
         }
         return (
-            <div className="ImageSlice" style={this.buildImageSliceStyle()}>
-                <div className="photo-container" style={this.buildPhotoContainerSliceStyle()}>
+            <div className="ImageSlice" style={this.buildImageSliceStyle(v)}>
+                <div className="photo-container" style={this.buildPhotoContainerSliceStyle(v)}>
                     {slices}
                 </div>
             </div>

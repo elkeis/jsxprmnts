@@ -26,3 +26,30 @@ $shift: 5px;
         animation: slice-glitch .2s linear .1s infinite alternate;
     }
 }
+
+// @keyframes slice-glitch {
+//     0% {
+//         transform: translateX(0);
+//     }
+//     30% {
+//         transform: translateX(-5px);
+//     }
+//     60% {
+//         transform: translateX(5px);
+//     }
+//     100% {
+//         transform: translateX(0);
+//     }
+  
+//   }
+  
+  
+//   .image-slice:nth-child(odd) {
+//           filter: hue-rotate(85deg);
+//           animation: slice-glitch .2s linear .0s infinite alternate;
+//   }
+//   .image-slice:nth-child(even) {
+//           filter: hue-rotate(-85deg);
+//           animation: slice-glitch .2s linear .1s infinite alternate;
+//       }
+  

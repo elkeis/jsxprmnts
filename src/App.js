@@ -28,6 +28,16 @@ class App extends Component {
       sliceCount: event.target.value
     });
   }
+  changeClassName(event) {
+    this.setState({
+      sliceClass: event.target.value
+    });
+  }
+  changeStyle(event) {
+    this.setState({
+      styleText: event.target.value
+    });
+  }
 
   render() {
     return (
@@ -49,19 +59,28 @@ class App extends Component {
         <div className="controls">
           <div className="control">
             <label>angle</label>
-            <input type="range" name="angle" onChange={this.changeAngle.bind(this)}
-              min="0" max="180"
+            <input type="number" name="angle" onChange={this.changeAngle.bind(this)}
+              min="0" max="180" value={this.state.sliceAngle}
             ></input>
             <span>value: {this.state.sliceAngle}</span>
           </div>
           <div className="control">
             <label>slice count</label>
-            <input type="range" name="angle" onChange={this.changeCount.bind(this)}
-              min="2" max="111"
+            <input type="number" name="count" onChange={this.changeCount.bind(this)}
+              min="2" max="111" value={this.state.sliceCount}
             ></input>
             <span>value: {this.state.sliceCount}</span>
           </div>
+          <div className="control">
+            <label>slice className</label>
+            <input type="text" name="className" value={this.state.sliceClass} onChange={this.changeClassName.bind(this)}
+            ></input>
+          </div>
+          <div className="css-editor">
+            <textarea onChange={this.changeStyle.bind(this)}></textarea>
+          </div>
         </div>
+        <style>{this.state.styleText}</style>
       </div>
     );
   }
