@@ -1,10 +1,5 @@
 import React, {Component} from 'react';
 import {calculateCssValues} from './sliceMath';
-const COMPONENT_STYLE = {
-    width: '100%',
-    height: '100%',
-    position: 'relative'
-};
 
 const DEFAULT_SLICE_CLASS_NAME = 'slice';
 

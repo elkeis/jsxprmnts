@@ -12,8 +12,6 @@
         flex-direction: column;
 
         >.image-container {
-            width: calc(auto - 10px);
-            height: calc(auto - 10px);
             overflow: hidden;
             >.image {
                 margin: -5px;

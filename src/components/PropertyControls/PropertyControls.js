@@ -13,7 +13,6 @@ class PropertyControls extends Component {
     }
 
     renderTextControl(name, value) {
-
         return (
             <div className="digit-control">
                 <label>{name}</label>
@@ -24,11 +23,11 @@ class PropertyControls extends Component {
     }
 
     buildOnChangeFunction(propertyName) {
-        const onChange = ((event) => {
+        const onChange = (event) => {
             this.props.onChange({
                 [propertyName]: event.target.value 
             });
-        }).bind(this);
+        };
         return onChange;
     } 
 
