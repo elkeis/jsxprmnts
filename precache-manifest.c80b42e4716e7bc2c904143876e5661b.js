@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3c5015d639128b132c79",
-    "url": "/jsxprmnts/static/css/main.fb02fef6.chunk.css"
+    "revision": "cc4977a93614d5bebf42",
+    "url": "/jsxprmnts/static/css/main.60dcaf8f.chunk.css"
   },
   {
-    "revision": "3c5015d639128b132c79",
-    "url": "/jsxprmnts/static/js/main.2415419b.chunk.js"
+    "revision": "cc4977a93614d5bebf42",
+    "url": "/jsxprmnts/static/js/main.00df510f.chunk.js"
   },
   {
     "revision": "b0bc529b68e9e810d609",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/jsxprmnts/static/media/rick-and-morty.e232eb84.png"
   },
   {
-    "revision": "f03fb3af76e283354e461508f4f37b58",
+    "revision": "d3643b800c8d9246b447d5d3e3a5f14e",
     "url": "/jsxprmnts/index.html"
   }
 ];
