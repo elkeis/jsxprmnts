@@ -54,17 +54,22 @@ class ImageSlicePage extends Component {
         return (
             <div className="image-slice-page">
                 <div className="component-area">
-                    <h1>ImageSlice component</h1>
-                    <p>Image sliced in <code>N</code> pieces at different angle. 
-                    Use controls and CSS editor to play with effects.</p>
-                    <p><a href="https://github.com/elkeis/jsxprmnts">source</a></p>
-                    
-                    <div className="image-container">
-                        <div className="image">
-                            <ImageSlice
-                                {...this.state.imageSlice}
-                            >
-                            </ImageSlice>
+                    <div className="description">
+                        <h1>ImageSlice component</h1>
+                        <p>Image sliced in <code>N</code> pieces at different angle. 
+                        Use controls and CSS editor to play with effects.</p>
+                    </div>
+                    <div className="source">
+                        <p><a href="https://github.com/elkeis/jsxprmnts">source</a></p>
+                    </div>
+                    <div className="image-flex-container">
+                        <div className="image-border-cut">
+                            <div className="image">
+                                <ImageSlice
+                                    {...this.state.imageSlice}
+                                >
+                                </ImageSlice>
+                            </div>
                         </div>
                     </div>
                     <div className="component-property-controls">
@@ -73,15 +78,19 @@ class ImageSlicePage extends Component {
                             onChange={this.setImageSliceProps.bind(this)}
                         >
                         </PropertyControls>
+                    </div>
+                    <div className="presets">
                         <button onClick={this.setGlitchStyle.bind(this)}>glitch</button>
                         <button onClick={this.setSplitStyle.bind(this)}>split</button>
                         <button onClick={this.setDrunkStyle.bind(this)}> drunk</button>
                     </div>
                 </div>
                 <div className="styles-area">
-                    <CSSEditor
-                        css={this.state.css}
-                    ></CSSEditor>
+                    <div>
+                        <CSSEditor
+                            css={this.state.css}
+                        ></CSSEditor>
+                    </div>
                 </div>
             </div>
         );
