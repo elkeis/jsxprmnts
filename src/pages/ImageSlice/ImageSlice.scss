@@ -7,8 +7,8 @@ $media-break: 800px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
     @media screen and (max-width: $media-break) {
+        overflow: hidden;
         flex-direction: column;
         justify-content: flex-start;
         .description, .component-property-controls, .styles-area {
@@ -23,6 +23,11 @@ $media-break: 800px;
                 min-width: 50px;
                 margin-right: 10px;
             }
+        }
+
+        .source {
+            text-align: center;
+            width: 100%;
         }
     }
 
