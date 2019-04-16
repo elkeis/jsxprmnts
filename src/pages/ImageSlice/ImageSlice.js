@@ -34,7 +34,6 @@ class ImageSlicePage extends Component {
     }
 
     setImageSliceProps(propsObj) {
-        debugger;
         const imageSliceProps = this.buildImageSliceProps(propsObj);
         if(throwSliceCountAlert(imageSliceProps)) {
             this.setState({
