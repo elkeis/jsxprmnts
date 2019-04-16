@@ -33,7 +33,7 @@ const SLICE_CSS = `@keyframes slice-glitch {
         transform: translateX(0);
     }
     50%{
-       transform: translateX(-5px);
+       transform: translateX(-3px);
     }
     100% {
         transform: translateX(0px);
