@@ -1,5 +1,5 @@
 {
-  "main.css": "/jsxprmnts/static/css/main.d90f3c11.chunk.css",
+  "main.css": "/jsxprmnts/static/css/main.57abbef7.chunk.css",
   "main.js": "/jsxprmnts/static/js/main.35101537.chunk.js",
   "main.js.map": "/jsxprmnts/static/js/main.35101537.chunk.js.map",
   "runtime~main.js": "/jsxprmnts/static/js/runtime~main.db5d2d39.js",
@@ -7,8 +7,8 @@
   "static/js/2.096a3b10.chunk.js": "/jsxprmnts/static/js/2.096a3b10.chunk.js",
   "static/js/2.096a3b10.chunk.js.map": "/jsxprmnts/static/js/2.096a3b10.chunk.js.map",
   "index.html": "/jsxprmnts/index.html",
-  "precache-manifest.86905db17204ee130818e51ef928441d.js": "/jsxprmnts/precache-manifest.86905db17204ee130818e51ef928441d.js",
+  "precache-manifest.823d01cac2d5801612cd77874b00daf4.js": "/jsxprmnts/precache-manifest.823d01cac2d5801612cd77874b00daf4.js",
   "service-worker.js": "/jsxprmnts/service-worker.js",
-  "static/css/main.d90f3c11.chunk.css.map": "/jsxprmnts/static/css/main.d90f3c11.chunk.css.map",
+  "static/css/main.57abbef7.chunk.css.map": "/jsxprmnts/static/css/main.57abbef7.chunk.css.map",
   "static/media/rick-and-morty.png": "/jsxprmnts/static/media/rick-and-morty.e232eb84.png"
 }
