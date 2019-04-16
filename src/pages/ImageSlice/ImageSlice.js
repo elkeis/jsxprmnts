@@ -3,6 +3,7 @@ import ImageSlice from '../../components/ImageSlice';
 import initialData, {DRUNK_SLICE_CLASS, SLICE_CLASS} from './initialData';
 import PropertyControls from '../../components/PropertyControls';
 import CSSEditor from '../../components/CSSEditor';
+import throwSliceCountAlert from './sliceCountAlert';
 
 const GLITCH_STYLE = {
     sliceAngle: 195,
@@ -33,9 +34,17 @@ class ImageSlicePage extends Component {
     }
 
     setImageSliceProps(propsObj) {
-        this.setState({
-            imageSlice: {...this.state.imageSlice, ...propsObj}
-        });
+        debugger;
+        const imageSliceProps = this.buildImageSliceProps(propsObj);
+        if(throwSliceCountAlert(imageSliceProps)) {
+            this.setState({
+                imageSlice: imageSliceProps
+            });
+        };
+    }
+
+    buildImageSliceProps(propsObj) {
+        return {...this.state.imageSlice, ...propsObj};
     }
 
     setGlitchStyle() {
