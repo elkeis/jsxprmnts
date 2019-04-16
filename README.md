@@ -1,6 +1,6 @@
 # Experiments with js
 
-personal js playground.
+js playground.
 
 https://elkeis.github.io/jsxprmnts/
 

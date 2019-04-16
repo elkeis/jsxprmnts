@@ -56,7 +56,9 @@ class ImageSlicePage extends Component {
                 <div className="component-area">
                     <h1>ImageSlice component</h1>
                     <p>Image sliced in <code>N</code> pieces at different angle. 
-                    Use controls and CSS editor to play with effects</p>
+                    Use controls and CSS editor to play with effects.</p>
+                    <p><a href="https://github.com/elkeis/jsxprmnts">source</a></p>
+                    
                     <div className="image-container">
                         <div className="image">
                             <ImageSlice
