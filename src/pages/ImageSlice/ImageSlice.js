@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ImageSlice from '../../components/ImageSlice';
-import initialData, {DRUNK_SLICE_CLASS, SLICE_CLASS} from './initial-data';
+import initialData, {DRUNK_SLICE_CLASS, SLICE_CLASS} from './initialData';
 import PropertyControls from '../../components/PropertyControls';
 import CSSEditor from '../../components/CSSEditor';
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
-import ImageSlicePage from './pages/image-slice';
+import ImageSlicePage from './pages/ImageSlice';
 
 class App extends Component {
   render() {

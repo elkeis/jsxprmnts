@@ -1,4 +1,4 @@
 import PropertyControls from './PropertyControls';
-import './property-controls.scss';
+import './PropertyControls.scss';
 
 export default PropertyControls;
